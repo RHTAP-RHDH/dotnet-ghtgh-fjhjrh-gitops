@@ -1,0 +1,21 @@
+apiVersion: backstage.io/v1alpha1
+kind: Resource
+metadata:
+  name: dotnet-test-tertr6yyt-gitops
+  description: This is GitOps manifest for dotnet-test-tertr6yyt   
+  links:
+    - url: https://www.redhat.com/en/solutions/trusted-software-supply-chain
+      title: Trusted Secure Supply Chain 
+      icon: dashboard
+      type: admin-dashboard
+  annotations:    
+    argocd/app-name: dotnet-test-tertr6yyt
+    janus-idp.io/tekton: dotnet-test-tertr6yyt
+    backstage.io/kubernetes-id: dotnet-test-tertr6yyt 
+    backstage.io/techdocs-ref: dir:. 
+spec:
+  type: gitops
+  owner: user:guest 
+  lifecycle: experimental
+  dependsOn:
+    - component:dotnet-test-tertr6yyt
